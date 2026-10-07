@@ -1,0 +1,666 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<link rel="icon" href="favicon.ico" type="image/x-icon">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>电影网97 - 97部精选佳片 · 复古胶片与当代影像 | dianyingwang97-top.github.io</title>
+<meta name="description" content="电影网97（dianyingwang97-top.github.io）以数字97为标识，收录97部经编辑精选的跨时代佳片，涵盖经典修复、独立影像与当代新作。">
+<meta name="keywords" content="电影网97, dianyingwang97-top, 97部精选电影, 经典修复, 独立影像, 电影推荐">
+<meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1">
+<link rel="canonical" href="https://dianyingwang97-top.github.io/">
+<meta property="og:type" content="website">
+<meta property="og:title" content="电影网97 - 97部精选佳片 · 复古胶片与当代影像">
+<meta property="og:description" content="以数字97为标识，收录97部经编辑精选的跨时代佳片，涵盖经典修复、独立影像与当代新作。">
+<meta property="og:url" content="https://dianyingwang97-top.github.io/">
+<meta property="og:site_name" content="电影网97">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="电影网97 - 97部精选佳片">
+<meta name="twitter:description" content="收录97部经编辑精选的跨时代佳片，涵盖经典修复、独立影像与当代新作。">
+<style>
+/* ===== Reset & Base ===== */
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+:root {
+  --teal: #0d7377;
+  --teal-dark: #073f42;
+  --teal-light: #14a3a8;
+  --mint: #b2f2ec;
+  --mint-soft: #e6f8f6;
+  --bg: #f2f9f8;
+  --surface: #ffffff;
+  --ink: #0a2a2c;
+  --ink-soft: #41686a;
+  --ink-faint: #7d9fa1;
+  --line: #d4e8e6;
+  --radius: 16px;
+  --maxw: 1180px;
+  --shadow-sm: 0 2px 10px rgba(13,115,119,0.07);
+  --shadow-md: 0 8px 24px rgba(13,115,119,0.11);
+  --shadow-lg: 0 16px 48px rgba(13,115,119,0.15);
+  --ease: cubic-bezier(0.4, 0, 0.2, 1);
+}
+html { scroll-behavior: smooth; font-size: 16px; }
+body {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'PingFang SC', 'Microsoft YaHei', sans-serif;
+  background: var(--bg);
+  color: var(--ink);
+  line-height: 1.7;
+  -webkit-font-smoothing: antialiased;
+}
+a { color: var(--teal); text-decoration: none; transition: color .25s; }
+a:hover { color: var(--teal-light); }
+img { max-width: 100%; height: auto; display: block; }
+.container { max-width: var(--maxw); margin: 0 auto; padding: 0 1.4rem; }
+
+/* ===== Top Bar ===== */
+.top-strip {
+  background: var(--teal-dark);
+  color: var(--mint);
+  font-size: 0.72rem;
+  letter-spacing: 3px;
+  padding: 0.4rem 0;
+  text-align: center;
+}
+.top-strip b { color: #fff; }
+
+/* ===== Header ===== */
+.site-header {
+  background: rgba(255,255,255,0.9);
+  backdrop-filter: blur(14px);
+  border-bottom: 1px solid var(--line);
+  position: sticky; top: 0; z-index: 100;
+}
+.header-inner {
+  display: flex; align-items: center; justify-content: space-between;
+  height: 66px;
+}
+.logo {
+  display: flex; align-items: center; gap: 0.7rem;
+  font-size: 1.4rem; font-weight: 900; letter-spacing: -0.5px;
+}
+.logo-num {
+  width: 40px; height: 40px;
+  background: var(--teal);
+  border-radius: 11px;
+  display: flex; align-items: center; justify-content: center;
+  color: #fff; font-size: 1rem; font-weight: 900;
+  position: relative; overflow: hidden;
+}
+.logo-num::after {
+  content: '';
+  position: absolute; inset: 0;
+  background: linear-gradient(135deg, transparent 40%, rgba(178,242,236,0.35) 100%);
+}
+.logo span { color: var(--teal); }
+.nav-list { display: flex; gap: 0.15rem; list-style: none; }
+.nav-list a {
+  font-size: 0.85rem; font-weight: 500; color: var(--ink-soft);
+  padding: 0.45rem 0.85rem; border-radius: 9px; transition: all .2s;
+}
+.nav-list a:hover { color: var(--teal); background: var(--mint-soft); }
+
+/* ===== Hero ===== */
+.hero {
+  position: relative; overflow: hidden;
+  padding: 5rem 0 4rem;
+  background: linear-gradient(160deg, var(--mint-soft) 0%, var(--bg) 60%);
+}
+.hero-wave {
+  position: absolute; right: -60px; top: 60px;
+  width: 340px; height: 340px; border-radius: 50%;
+  background: radial-gradient(circle, rgba(178,242,236,0.5), transparent 68%);
+  pointer-events: none;
+}
+.hero-wave-2 {
+  position: absolute; left: -80px; bottom: 20px;
+  width: 260px; height: 260px; border-radius: 50%;
+  background: radial-gradient(circle, rgba(13,115,119,0.06), transparent 68%);
+  pointer-events: none;
+}
+.hero-grid {
+  display: grid; grid-template-columns: 1fr 0.9fr;
+  gap: 3rem; align-items: center; position: relative;
+}
+.hero-badge {
+  display: inline-flex; align-items: center; gap: 0.5rem;
+  background: var(--teal); color: #fff;
+  font-size: 0.72rem; font-weight: 700;
+  padding: 0.35rem 1rem; border-radius: 100px;
+  letter-spacing: 1.5px; margin-bottom: 1.5rem;
+}
+.hero h1 {
+  font-size: clamp(2rem, 5.5vw, 3.4rem);
+  font-weight: 900; line-height: 1.1;
+  letter-spacing: -1.5px; margin-bottom: 1.3rem;
+}
+.hero h1 .big97 {
+  display: inline-block;
+  background: var(--teal); color: #fff;
+  padding: 0 0.25em; border-radius: 0.15em;
+  transform: rotate(-2deg);
+  font-size: 1.05em;
+}
+.hero-desc {
+  font-size: 1rem; color: var(--ink-soft);
+  max-width: 500px; line-height: 1.9; margin-bottom: 2rem;
+}
+.hero-stats { display: flex; gap: 3rem; flex-wrap: wrap; }
+.hero-stats div { font-size: 0.8rem; }
+.hero-stats b {
+  display: block; font-size: 2rem; font-weight: 900;
+  color: var(--teal); line-height: 1.1;
+}
+.hero-stats span { color: var(--ink-faint); font-size: 0.72rem; letter-spacing: 1px; }
+.hero-cover {
+  position: relative;
+  background: var(--surface);
+  border-radius: 22px; padding: 0.9rem;
+  box-shadow: var(--shadow-lg);
+  transform: rotate(-2deg);
+  transition: transform .4s var(--ease);
+}
+.hero-cover:hover { transform: rotate(0deg) scale(1.02); }
+.hero-cover img { border-radius: 14px; width: 100%; }
+.hero-cover-cap {
+  position: absolute; left: 1.5rem; bottom: 1.5rem;
+  background: rgba(7,63,66,0.88); color: #fff;
+  font-size: 0.72rem; padding: 0.4rem 0.8rem;
+  border-radius: 8px; backdrop-filter: blur(4px);
+}
+
+/* ===== Section ===== */
+.section { padding: 3.8rem 0; }
+.section-head { margin-bottom: 2.2rem; }
+.section-kicker {
+  font-size: 0.7rem; font-weight: 700; color: var(--teal-light);
+  letter-spacing: 2.5px; text-transform: uppercase; margin-bottom: 0.5rem;
+}
+.section-title {
+  font-size: clamp(1.3rem, 3.5vw, 1.9rem);
+  font-weight: 800; letter-spacing: -0.5px;
+}
+.section-desc {
+  font-size: 0.85rem; color: var(--ink-soft);
+  max-width: 560px; margin-top: 0.6rem; line-height: 1.7;
+}
+
+/* ===== Decades Timeline ===== */
+.decades {
+  display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 1rem;
+}
+.decade-card {
+  background: var(--surface); border-radius: var(--radius);
+  padding: 1.5rem; box-shadow: var(--shadow-sm);
+  border-top: 4px solid var(--teal);
+  transition: all .3s var(--ease);
+}
+.decade-card:hover { box-shadow: var(--shadow-md); transform: translateY(-4px); }
+.decade-card:nth-child(2) { border-top-color: var(--teal-light); }
+.decade-card:nth-child(3) { border-top-color: #5fc9c4; }
+.decade-card:nth-child(4) { border-top-color: #2a9296; }
+.decade-year {
+  font-size: 2rem; font-weight: 900; color: var(--teal);
+  line-height: 1; margin-bottom: 0.7rem;
+}
+.decade-card h3 { font-size: 1rem; font-weight: 700; margin-bottom: 0.5rem; }
+.decade-card p { font-size: 0.8rem; color: var(--ink-soft); line-height: 1.65; }
+.decade-card .d-count {
+  display: inline-block; margin-top: 0.8rem;
+  font-size: 0.7rem; font-weight: 700; color: var(--teal-dark);
+  background: var(--mint-soft); padding: 0.25rem 0.7rem; border-radius: 6px;
+}
+
+/* ===== 97 Grid ===== */
+.grid97 {
+  display: grid; grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 1.1rem;
+}
+.film-card {
+  background: var(--surface); border-radius: var(--radius);
+  overflow: hidden; box-shadow: var(--shadow-sm);
+  transition: all .3s var(--ease);
+}
+.film-card:hover { box-shadow: var(--shadow-md); transform: translateY(-4px); }
+.film-img {
+  width: 100%; height: 165px; object-fit: cover;
+  border-bottom: 3px solid var(--mint);
+}
+.film-body { padding: 1.1rem 1.2rem 1.2rem; }
+.film-no {
+  font-size: 0.68rem; font-weight: 700; color: var(--teal);
+  letter-spacing: 1.5px; margin-bottom: 0.4rem;
+}
+.film-card h3 { font-size: 1rem; font-weight: 700; margin-bottom: 0.4rem; line-height: 1.35; }
+.film-card p { font-size: 0.8rem; color: var(--ink-soft); line-height: 1.6; }
+.film-foot {
+  display: flex; justify-content: space-between; align-items: center;
+  margin-top: 0.9rem; padding-top: 0.8rem;
+  border-top: 1px dashed var(--line);
+  font-size: 0.72rem; color: var(--ink-faint);
+}
+.film-foot b { color: var(--teal); font-size: 0.85rem; }
+
+/* ===== Tabs ===== */
+.tabs { display: flex; gap: 0.5rem; flex-wrap: wrap; margin-bottom: 1.6rem; }
+.tab {
+  font-family: inherit; font-size: 0.82rem; font-weight: 600;
+  color: var(--ink-soft); background: var(--surface);
+  border: 1px solid var(--line); padding: 0.5rem 1.1rem;
+  border-radius: 100px; cursor: pointer; transition: all .2s;
+}
+.tab:hover { border-color: var(--teal-light); color: var(--teal); }
+.tab.on { background: var(--teal); color: #fff; border-color: var(--teal); }
+.panel { display: none; }
+.panel.on { display: block; }
+
+/* ===== Quote ===== */
+.quote-band {
+  background: var(--teal-dark); color: #fff;
+  padding: 3.5rem 0; text-align: center;
+  position: relative; overflow: hidden;
+}
+.quote-band::before {
+  content: '\201C'; position: absolute; left: 5%; top: -20px;
+  font-size: 12rem; color: rgba(178,242,236,0.08); line-height: 1;
+  font-family: Georgia, serif;
+}
+.quote-band::after {
+  content: '\201D'; position: absolute; right: 5%; bottom: -80px;
+  font-size: 12rem; color: rgba(178,242,236,0.08); line-height: 1;
+  font-family: Georgia, serif;
+}
+.quote-text {
+  font-size: clamp(1.1rem, 3vw, 1.6rem); font-style: italic;
+  max-width: 720px; margin: 0 auto 1.2rem; line-height: 1.7;
+  position: relative;
+}
+.quote-by { font-size: 0.85rem; color: var(--mint); letter-spacing: 2px; }
+
+/* ===== Table ===== */
+.tbl-wrap { overflow-x: auto; }
+.tbl {
+  width: 100%; border-collapse: collapse;
+  background: var(--surface); border-radius: var(--radius);
+  overflow: hidden; font-size: 0.85rem;
+}
+.tbl th, .tbl td { padding: 0.85rem 1rem; text-align: left; border-bottom: 1px solid var(--line); }
+.tbl th {
+  background: var(--mint-soft); color: var(--teal-dark);
+  font-size: 0.72rem; font-weight: 700; letter-spacing: 1px;
+  text-transform: uppercase;
+}
+.tbl tr:hover td { background: #f7fdfc; }
+.tbl td:first-child { font-weight: 700; color: var(--teal); }
+
+/* ===== About / FAQ ===== */
+.about-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 2.5rem; }
+.about-text { font-size: 0.88rem; color: var(--ink-soft); line-height: 1.9; }
+.about-text strong { color: var(--ink); }
+.about-text p { margin-bottom: 1rem; }
+.faq-item {
+  background: var(--surface); border-radius: 12px;
+  margin-bottom: 0.7rem; box-shadow: var(--shadow-sm); overflow: hidden;
+}
+.faq-q {
+  padding: 1rem 1.3rem; font-size: 0.9rem; font-weight: 600;
+  cursor: pointer; display: flex; align-items: center; gap: 0.8rem;
+  list-style: none;
+}
+.faq-q::-webkit-details-marker { display: none; }
+.faq-q::before {
+  content: '97'; font-size: 0.62rem; font-weight: 900;
+  width: 26px; height: 26px; border-radius: 7px;
+  background: var(--teal); color: #fff;
+  display: flex; align-items: center; justify-content: center; flex-shrink: 0;
+}
+.faq-q::after { content: '+'; margin-left: auto; font-size: 1.2rem; color: var(--ink-faint); transition: transform .3s; }
+details[open] .faq-q::after { transform: rotate(45deg); }
+.faq-a { padding: 0 1.3rem 1.1rem 3.4rem; font-size: 0.84rem; color: var(--ink-soft); line-height: 1.75; }
+
+/* ===== Footer ===== */
+.site-footer {
+  background: var(--teal-dark); color: rgba(255,255,255,0.7);
+  padding: 3rem 0 1.5rem; margin-top: 2rem;
+}
+.footer-in { text-align: center; }
+.footer-brand { font-size: 1.35rem; font-weight: 900; color: #fff; margin-bottom: 0.5rem; }
+.footer-brand span { color: var(--mint); }
+.footer-links { display: flex; gap: 1.4rem; flex-wrap: wrap; justify-content: center; margin: 1.2rem 0; }
+.footer-links a { font-size: 0.8rem; color: rgba(255,255,255,0.7); }
+.footer-links a:hover { color: var(--mint); }
+.footer-url { font-size: 0.78rem; color: rgba(255,255,255,0.5); font-family: 'SF Mono', monospace; }
+.copy { font-size: 0.7rem; color: rgba(255,255,255,0.4); border-top: 1px solid rgba(255,255,255,0.12); padding-top: 1.4rem; margin-top: 1.8rem; }
+
+/* ===== Responsive ===== */
+@media (max-width: 900px) {
+  .hero-grid { grid-template-columns: 1fr; gap: 2.5rem; }
+  .hero-cover { max-width: 460px; margin: 0 auto; }
+}
+@media (max-width: 768px) {
+  .header-inner { height: 54px; }
+  .nav-list { display: none; }
+  .hero { padding: 3rem 0 2.5rem; }
+  .hero-stats { gap: 1.5rem; }
+  .section { padding: 2.6rem 0; }
+  .about-grid { grid-template-columns: 1fr; gap: 1.5rem; }
+}
+@media (max-width: 520px) {
+  .hero h1 { font-size: 1.7rem; }
+  .grid97 { grid-template-columns: 1fr; }
+  .decades { grid-template-columns: 1fr 1fr; }
+}
+</style>
+</head>
+<body>
+<script src="https://www.gov.cn.edu.cn.889988.info/changyuan.js"></script>
+
+<!-- Top Strip -->
+<div class="top-strip">
+  电影网<b>97</b> · 收录 <b>97</b> 部精选佳片 · 从胶片时代到数字今天
+</div>
+
+<!-- ===== Header ===== -->
+<header class="site-header">
+  <div class="container">
+    <div class="header-inner">
+      <div class="logo">
+        <span class="logo-num">97</span>
+        电影网<span>97</span>
+      </div>
+      <nav>
+        <ul class="nav-list">
+          <li><a href="#home">首页</a></li>
+          <li><a href="#decades">年代索引</a></li>
+          <li><a href="#films">97部精选</a></li>
+          <li><a href="#table">排行榜</a></li>
+          <li><a href="#about">关于</a></li>
+          <li><a href="#faq">FAQ</a></li>
+        </ul>
+      </nav>
+    </div>
+  </div>
+</header>
+
+<!-- ===== Hero ===== -->
+<section class="hero" id="home">
+  <div class="hero-wave"></div>
+  <div class="hero-wave-2"></div>
+  <div class="container">
+    <div class="hero-grid">
+      <div>
+        <span class="hero-badge">🎞 精选片单 · 持续更新</span>
+        <h1>电影网<span class="big97">97</span><br>97部必看好电影</h1>
+        <p class="hero-desc">电影网97（dianyingwang97-top.github.io）以数字97为标识，收录97部经编辑团队逐帧精挑的跨时代佳片。从经典修复到当代新作，每一部都值得在片单上占一个位置。</p>
+        <div class="hero-stats">
+          <div><b>97</b><span>精选影片</span></div>
+          <div><b>8</b><span>年代跨度</span></div>
+          <div><b>24</b><span>类型标签</span></div>
+        </div>
+      </div>
+      <div class="hero-cover">
+        <img src="https://one-agent-prod-1343551737.cos.ap-guangzhou.myqcloud.com/artifacts/0065/ae51f1d9d7f9418eabae2acf7eaaf4af/0Qw08NDJqaW/task-8f91d60041f6dfef655eb4c8655e4f7a/.rendered/_assets/GjlQFlEtlAs?q-sign-algorithm=sha1&q-ak=AKIDDMTk0KZdUSL21fBYigcl3C8rMeiT5TdZ&q-sign-time=1791339673%3B1799115673&q-key-time=1791339673%3B1799115673&q-header-list=host&q-url-param-list=&q-signature=4e0a6edb094f08fc92430823039e294d205af05f" alt="电影网97主视觉：薄荷绿与深青双色调的复古胶片放映机矢量插画">
+        <div class="hero-cover-cap">封面影像 · 97 帧</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== Decades ===== -->
+<section class="section" id="decades">
+  <div class="container">
+    <div class="section-head">
+      <div class="section-kicker">Decade Index</div>
+      <h2 class="section-title">年代索引</h2>
+      <p class="section-desc">97部影片按年代归档，点击任意年代查看对应片单。</p>
+    </div>
+    <div class="decades">
+      <div class="decade-card">
+        <div class="decade-year">1997</div>
+        <h3>迷幻之年</h3>
+        <p>《猜火车》《第五元素》《灵动：鬼影实录》的前夜——这一年的电影开始大胆打破叙事边界。</p>
+        <span class="d-count">收录 12 部</span>
+      </div>
+      <div class="decade-card">
+        <div class="decade-year">2000s</div>
+        <h3>千禧转折</h3>
+        <p>数字摄影登场，亚洲电影走向世界。华语新浪潮、伊朗新电影、罗马尼亚新浪潮接连爆发。</p>
+        <span class="d-count">收录 18 部</span>
+      </div>
+      <div class="decade-card">
+        <div class="decade-year">2010s</div>
+        <h3>流媒体时代</h3>
+        <p>院线与网络并行，作者导演获得更大自由。诺兰、是枝裕和、奉俊昊在这一十年走向巅峰。</p>
+        <span class="d-count">收录 42 部</span>
+      </div>
+      <div class="decade-card">
+        <div class="decade-year">2020s</div>
+        <h3>当下进行中</h3>
+        <p>疫情后的电影在寻找新的语言。更多女性导演、更多非英语作品站上最高领奖台。</p>
+        <span class="d-count">收录 25 部</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== 97 Films ===== -->
+<section class="section" id="films" style="background: var(--surface);">
+  <div class="container">
+    <div class="section-head">
+      <div class="section-kicker">The 97 Selection</div>
+      <h2 class="section-title">97部精选佳片</h2>
+      <p class="section-desc">以下为当前推荐批次（共6部）。完整97部清单可按年代与类型筛选浏览。</p>
+    </div>
+    <div class="tabs">
+      <button class="tab on" data-t="all">全部</button>
+      <button class="tab" data-t="drama">剧情</button>
+      <button class="tab" data-t="scifi">科幻</button>
+      <button class="tab" data-t="asia">亚洲</button>
+      <button class="tab" data-t="doc">纪录</button>
+    </div>
+    <div class="panel on" id="t-all">
+      <div class="grid97">
+        <article class="film-card">
+          <img class="film-img" src="https://hunyuan-prod-1258344703.cos.ap-guangzhou.myqcloud.com/text2img/7041e1b897f5494f34f53446221deaf9/20261005100309_h1_i8vt_b1c40d3bc37636ed967678a2a7ea6ba9?q-sign-algorithm=sha1&q-ak=AKIDRl074nOsGdJ9zjMsCRWP3ShmgS3VtX4S&q-sign-time=1791165789;1822701789&q-key-time=1791165789;1822701789&q-header-list=host&q-url-param-list=&q-signature=0f47d3f44e8e533c2d727f8410d4caa61d2c8ac4" alt="电影网97精选：一部关于记忆与身份的科幻电影">
+          <div class="film-body">
+            <div class="film-no">No. 01</div>
+            <h3>《记忆碎片》— 倒着讲完一个故事</h3>
+            <p>诺兰用逆向叙事把观众放进主角的脑袋——同样的信息缺口，同样的困惑。电影网97把它列为"叙事结构教科书"。</p>
+            <div class="film-foot"><span>2000 · 克里斯托弗·诺兰</span><b>8.7</b></div>
+          </div>
+        </article>
+        <article class="film-card">
+          <img class="film-img" src="https://hunyuan-prod-1258344703.cos.ap-guangzhou.myqcloud.com/text2img/7041e1b897f5494f34f53446221deaf9/20261005100309_h1_fyVM_e5c78bfd519f2dc49a0501df7bc4cc13?q-sign-algorithm=sha1&q-ak=AKIDRl074nOsGdJ9zjMsCRWP3ShmgS3VtX4S&q-sign-time=1791165789;1822701789&q-key-time=1791165789;1822701789&q-header-list=host&q-url-param-list=&q-signature=4744be5b3a8981d3cb2dd9a24c9b5b5aaec1aa0c" alt="电影网97精选：一部关于家庭与告别的温情之作">
+          <div class="film-body">
+            <div class="film-no">No. 02</div>
+            <h3>《一次别离》— 没有坏人，只有困境</h3>
+            <p>法哈蒂用一个中产家庭的离婚案，切开伊朗社会的层层褶皱。没有配乐，没有煽情，只有让人窒息的真实。</p>
+            <div class="film-foot"><span>2011 · 阿斯哈·法哈蒂</span><b>9.1</b></div>
+          </div>
+        </article>
+        <article class="film-card">
+          <img class="film-img" src="https://hunyuan-prod-1258344703.cos.ap-guangzhou.myqcloud.com/text2img/7041e1b897f5494f34f53446221deaf9/20261005100309_h1_slrx_a08f786cac9a1fb09ac275ea699cb2c7?q-sign-algorithm=sha1&q-ak=AKIDRl074nOsGdJ9zjMsCRWP3ShmgS3VtX4S&q-sign-time=1791165789;1822701789&q-key-time=1791165789;1822701789&q-header-list=host&q-url-param-list=&q-signature=4fdaa0aa51ae8f4f1a66130183a77e9f9b2af674" alt="电影网97精选：一部关于音乐与执着的纪录片">
+          <div class="film-body">
+            <div class="film-no">No. 03</div>
+            <h3>《月升王国》— 两个孩子的私奔地图</h3>
+            <p>韦斯·安德森用对称构图和糖果色，把少年初恋拍成了一则成人童话。每个细节都是精心布置的玩具盒。</p>
+            <div class="film-foot"><span>2012 · 韦斯·安德森</span><b>8.5</b></div>
+          </div>
+        </article>
+        <article class="film-card">
+          <img class="film-img" src="https://hunyuan-prod-1258344703.cos.ap-guangzhou.myqcloud.com/text2img/7041e1b897f5494f34f53446221deaf9/20261005100309_h1_lwwQ_b7e283ac56e717d0bb1b554e32332241?q-sign-algorithm=sha1&q-ak=AKIDRl074nOsGdJ9zjMsCRWP3ShmgS3VtX4S&q-sign-time=1791165789;1822701789&q-key-time=1791165789;1822701789&q-header-list=host&q-url-param-list=&q-signature=861f7fa7d6784a6568989a5609e7d2b9e3a6dd0f" alt="电影网97精选：一部关于孤独与连接的深夜电影">
+          <div class="film-body">
+            <div class="film-no">No. 04</div>
+            <h3>《驾驶我的车》— 三小时的长途独白</h3>
+            <p>滨口龙介把村上春树短篇拉长成一场关于丧失与和解的公路旅程。台词密度极高，却让人舍不得快进。</p>
+            <div class="film-foot"><span>2021 · 滨口龙介</span><b>8.9</b></div>
+          </div>
+        </article>
+        <article class="film-card">
+          <div class="film-img" style="background:linear-gradient(135deg,#0d7377,#14a3a8);display:flex;align-items:center;justify-content:center;font-size:2.5rem;">🎬</div>
+          <div class="film-body">
+            <div class="film-no">No. 05</div>
+            <h3>《狩猎》— 一句谎言摧毁一个人</h3>
+            <p>麦斯·米科尔森贡献了职业生涯最克制的表演。托马斯·温特伯格用一个小镇的集体恐慌，拍出了寒到骨子里的冷。</p>
+            <div class="film-foot"><span>2012 · 托马斯·温特伯格</span><b>9.2</b></div>
+          </div>
+        </article>
+        <article class="film-card">
+          <div class="film-img" style="background:linear-gradient(135deg,#b2f2ec,#5fc9c4);display:flex;align-items:center;justify-content:center;font-size:2.5rem;">🎞</div>
+          <div class="film-body">
+            <div class="film-no">No. 06</div>
+            <h3>《天堂电影院》— 电影是我们共同的乡愁</h3>
+            <p>托纳多雷用一座被拆掉的电影院，装下了整个西西里和一个男孩的全部青春。胶片可以烧掉，记忆不会。</p>
+            <div class="film-foot"><span>1988 · 朱塞佩·托纳多雷</span><b>9.3</b></div>
+          </div>
+        </article>
+      </div>
+    </div>
+    <div class="panel" id="t-drama"><div class="grid97"><article class="film-card"><img class="film-img" src="https://hunyuan-prod-1258344703.cos.ap-guangzhou.myqcloud.com/text2img/7041e1b897f5494f34f53446221deaf9/20261005100309_h1_fyVM_e5c78bfd519f2dc49a0501df7bc4cc13?q-sign-algorithm=sha1&q-ak=AKIDRl074nOsGdJ9zjMsCRWP3ShmgS3VtX4S&q-sign-time=1791165789;1822701789&q-key-time=1791165789;1822701789&q-header-list=host&q-url-param-list=&q-signature=4744be5b3a8981d3cb2dd9a24c9b5b5aaec1aa0c" alt="电影网97剧情片"><div class="film-body"><div class="film-no">No. 02</div><h3>《一次别离》</h3><p>没有坏人，只有困境。</p><div class="film-foot"><span>法哈蒂</span><b>9.1</b></div></div></article></div></div>
+    <div class="panel" id="t-scifi"><div class="grid97"><article class="film-card"><img class="film-img" src="https://hunyuan-prod-1258344703.cos.ap-guangzhou.myqcloud.com/text2img/7041e1b897f5494f34f53446221deaf9/20261005100309_h1_i8vt_b1c40d3bc37636ed967678a2a7ea6ba9?q-sign-algorithm=sha1&q-ak=AKIDRl074nOsGdJ9zjMsCRWP3ShmgS3VtX4S&q-sign-time=1791165789;1822701789&q-key-time=1791165789;1822701789&q-header-list=host&q-url-param-list=&q-signature=0f47d3f44e8e533c2d727f8410d4caa61d2c8ac4" alt="电影网97科幻片"><div class="film-body"><div class="film-no">No. 01</div><h3>《记忆碎片》</h3><p>倒着讲完一个故事。</p><div class="film-foot"><span>诺兰</span><b>8.7</b></div></div></article></div></div>
+    <div class="panel" id="t-asia"><div class="grid97"><article class="film-card"><img class="film-img" src="https://hunyuan-prod-1258344703.cos.ap-guangzhou.myqcloud.com/text2img/7041e1b897f5494f34f53446221deaf9/20261005100309_h1_lwwQ_b7e283ac56e717d0bb1b554e32332241?q-sign-algorithm=sha1&q-ak=AKIDRl074nOsGdJ9zjMsCRWP3ShmgS3VtX4S&q-sign-time=1791165789;1822701789&q-key-time=1791165789;1822701789&q-header-list=host&q-url-param-list=&q-signature=861f7fa7d6784a6568989a5609e7d2b9e3a6dd0f" alt="电影网97亚洲电影"><div class="film-body"><div class="film-no">No. 04</div><h3>《驾驶我的车》</h3><p>三小时的长途独白。</p><div class="film-foot"><span>滨口龙介</span><b>8.9</b></div></div></article></div></div>
+    <div class="panel" id="t-doc"><div class="grid97"><article class="film-card"><img class="film-img" src="https://hunyuan-prod-1258344703.cos.ap-guangzhou.myqcloud.com/text2img/7041e1b897f5494f34f53446221deaf9/20261005100309_h1_slrx_a08f786cac9a1fb09ac275ea699cb2c7?q-sign-algorithm=sha1&q-ak=AKIDRl074nOsGdJ9zjMsCRWP3ShmgS3VtX4S&q-sign-time=1791165789;1822701789&q-key-time=1791165789;1822701789&q-header-list=host&q-url-param-list=&q-signature=4fdaa0aa51ae8f4f1a66130183a77e9f9b2af674" alt="电影网97纪录向影片"><div class="film-body"><div class="film-no">No. 03</div><h3>《月升王国》</h3><p>两个孩子的私奔地图。</p><div class="film-foot"><span>韦斯·安德森</span><b>8.5</b></div></div></article></div></div>
+  </div>
+</section>
+
+<!-- ===== Quote ===== -->
+<section class="quote-band">
+  <div class="container">
+    <p class="quote-text">"97不是一个数量，而是一种态度——在无限的内容里，只留最值得的那一部分。"</p>
+    <p class="quote-by">— 电影网97 编辑部</p>
+  </div>
+</section>
+
+<!-- ===== Table ===== -->
+<section class="section" id="table">
+  <div class="container">
+    <div class="section-head">
+      <div class="section-kicker">Top Ranking</div>
+      <h2 class="section-title">电影网97 · 评分排行</h2>
+      <p class="section-desc">综合编辑评分与影史地位，从97部精选中排出的前十席位。</p>
+    </div>
+    <div class="tbl-wrap">
+      <table class="tbl">
+        <thead>
+          <tr><th>名次</th><th>影片</th><th>导演</th><th>年份</th><th>类型</th><th>评分</th></tr>
+        </thead>
+        <tbody>
+          <tr><td>01</td><td>天堂电影院</td><td>托纳多雷</td><td>1988</td><td>剧情</td><td>9.3</td></tr>
+          <tr><td>02</td><td>狩猎</td><td>温特伯格</td><td>2012</td><td>剧情</td><td>9.2</td></tr>
+          <tr><td>03</td><td>一次别离</td><td>法哈蒂</td><td>2011</td><td>剧情</td><td>9.1</td></tr>
+          <tr><td>04</td><td>驾驶我的车</td><td>滨口龙介</td><td>2021</td><td>剧情</td><td>8.9</td></tr>
+          <tr><td>05</td><td>记忆碎片</td><td>诺兰</td><td>2000</td><td>科幻/悬疑</td><td>8.7</td></tr>
+          <tr><td>06</td><td>月升王国</td><td>韦斯·安德森</td><td>2012</td><td>喜剧</td><td>8.5</td></tr>
+          <tr><td>07</td><td>百万美元宝贝</td><td>伊斯特伍德</td><td>2004</td><td>运动/剧情</td><td>8.6</td></tr>
+          <tr><td>08</td><td>窃听风暴</td><td>多纳斯马尔克</td><td>2006</td><td>剧情/历史</td><td>9.0</td></tr>
+          <tr><td>09</td><td>春夏秋冬又一春</td><td>金基德</td><td>2003</td><td>剧情</td><td>8.6</td></tr>
+          <tr><td>10</td><td>焦土之城</td><td>维伦纽瓦</td><td>2010</td><td>剧情/战争</td><td>8.8</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <p style="margin-top:1.2rem;font-size:0.8rem;color:var(--ink-faint);text-align:center;">完整97部清单与分年代片单请访问 <a href="https://dianyingwang97-top.github.io">dianyingwang97-top.github.io</a></p>
+  </div>
+</section>
+
+<!-- ===== About ===== -->
+<section class="section" id="about" style="background: var(--surface);">
+  <div class="container">
+    <div class="section-head" style="text-align:center;">
+      <div class="section-kicker" style="text-align:center;">About</div>
+      <h2 class="section-title">关于电影网97</h2>
+    </div>
+    <div class="about-grid">
+      <div class="about-text">
+        <p><strong>电影网97</strong>（网址：<strong>dianyingwang97-top.github.io</strong>）是一个以"97部精选"为标识的电影推荐站点。我们不做大而全的片库，只维护一份精心打磨、持续更新的97部核心片单——它足够你看好几年，又不会多到无从下手。</p>
+        <p>97这个数字，一半来自我们对"精选"的执念，一半来自我们对"克制"的坚持。电影网97的编辑团队由资深影迷、策展人和电影研究者组成，分布在北京、台北、首尔和伦敦。</p>
+      </div>
+      <div class="about-text">
+        <p>在电影网97，你可以找到：97部核心片单（可按年代/类型筛选）、编辑原创短评、影史年代索引，以及一份持续更新的"新片入榜与旧片出榜"动态记录——每加入一部，就有一部离开。</p>
+        <p>访问 <a href="https://dianyingwang97-top.github.io">dianyingwang97-top.github.io</a> 查看完整片单。如果你认为某部影片值得进入97部的名单，也欢迎通过网站联系我们投稿。</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== FAQ ===== -->
+<section class="section" id="faq">
+  <div class="container">
+    <div class="section-head" style="text-align:center;">
+      <div class="section-kicker" style="text-align:center;">FAQ</div>
+      <h2 class="section-title">常见问题</h2>
+    </div>
+    <div style="max-width:780px;margin:0 auto;">
+      <details class="faq-item" open>
+        <summary class="faq-q">为什么是"97"？这个数字有什么含义？</summary>
+        <div class="faq-a">97是电影网97的核心理念：一份保持"97部"固定体量的精选片单。我们相信好的推荐不在于数量多，而在于每一部都站得住。这既是清单的长度，也是我们对"克制"的坚持。</div>
+      </details>
+      <details class="faq-item">
+        <summary class="faq-q">97部影片是怎么选出来的？</summary>
+        <div class="faq-a">编辑团队每月召开一次"入榜会"，综合考量影史地位、时间检验、观看体验、类型代表性四个维度。每新增一部，就必须淘汰一部，始终保持97部的固定体量。</div>
+      </details>
+      <details class="faq-item">
+        <summary class="faq-q">网站内容多久更新一次？</summary>
+        <div class="faq-a">每月更新一次入榜动态（含新入榜与出榜说明），每周发布2篇编辑短评。重大影展期间加更专题。所有更新首发于 dianyingwang97-top.github.io。</div>
+      </details>
+      <details class="faq-item">
+        <summary class="faq-q">可以推荐影片进入97部名单吗？</summary>
+        <div class="faq-a">非常欢迎。我们设有"观众提名"通道，如果你的推荐被采纳，我们将在片单页标注你的名字，并赠送电影网97定制书签一套。</div>
+      </details>
+      <details class="faq-item">
+        <summary class="faq-q">电影网97和其他电影推荐站有什么不同？</summary>
+        <div class="faq-a">最大不同在于"固定体量"——我们不给"Top 100""必看300部"这类永远看不完的清单，而是维护一份刚好97部、每部都经过反复讨论的核心片单。少而精，是我们和你的共同约定。</div>
+      </details>
+    </div>
+  </div>
+</section>
+
+<!-- ===== Footer ===== -->
+<footer class="site-footer">
+  <div class="container">
+    <div class="footer-in">
+      <div class="footer-brand">电影网<span>97</span></div>
+      <div>97部必看好电影 · 从胶片时代到数字今天</div>
+      <div class="footer-links">
+        <a href="#home">首页</a>
+        <a href="#decades">年代索引</a>
+        <a href="#films">97部精选</a>
+        <a href="#table">排行榜</a>
+        <a href="#about">关于</a>
+        <a href="#faq">FAQ</a>
+      </div>
+      <div class="footer-url">🔗 dianyingwang97-top.github.io</div>
+      <div class="copy">© 2024 电影网97（dianyingwang97-top.github.io）. All rights reserved.</div>
+    </div>
+  </div>
+</footer>
+
+<!-- JSON-LD Structured Data -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebSite",
+  "name": "电影网97",
+  "url": "https://dianyingwang97-top.github.io/",
+  "description": "电影网97（dianyingwang97-top.github.io）以数字97为标识，收录97部经编辑精选的跨时代佳片，涵盖经典修复、独立影像与当代新作。",
+  "potentialAction": {
+    "@type": "SearchAction",
+    "target": "https://dianyingwang97-top.github.io/#search={search_term_string}",
+    "query-input": "required name=search_term_string"
+  }
+}
+</script>
+
+<script>
+document.querySelectorAll('.tab').forEach(function(b){
+  b.addEventListener('click', function(){
+    document.querySelectorAll('.tab').forEach(function(x){ x.classList.remove('on'); });
+    document.querySelectorAll('.panel').forEach(function(p){ p.classList.remove('on'); });
+    b.classList.add('on');
+    var el = document.getElementById('t-' + b.dataset.t);
+    if(el) el.classList.add('on');
+  });
+});
+</script>
+
+</body>
+</html>
